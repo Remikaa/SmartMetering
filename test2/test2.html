@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Meter Serial Configuration</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7faff;
+      color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 400px;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      color: #0d47a1;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #0d47a1;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 1.2rem;
+    }
+
+    input:focus,
+    select:focus {
+      outline: none;
+      border-color: #0d47a1;
+      box-shadow: 0 0 3px rgba(13, 71, 161, 0.3);
+    }
+
+    button {
+      width: 100%;
+      padding: 0.7rem;
+      font-size: 1rem;
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Serial Configuration</h1>
+    <form>
+      <label for="comPort">COM Port</label>
+      <select id="comPort" name="comPort">
+        <option value="">Select COM Port</option>
+        <option>COM1</option>
+        <option>COM2</option>
+      </select>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password">
+
+      <label for="baudRate">Baud Rate</label>
+      <select id="baudRate" name="baudRate">
+        <option value="">Select Baud Rate</option>
+        <option>9600</option>
+        <option>19200</option>
+      </select>
+
+      <label for="dataBits">Data Bits</label>
+      <input type="text" id="dataBits" name="dataBits" placeholder="e.g. 8">
+
+      <label for="parity">Parity</label>
+      <select id="parity" name="parity">
+        <option value="">Select Parity</option>
+        <option>None</option>
+        <option>Even</option>
+        <option>Odd</option>
+      </select>
+
+      <label for="stopBits">Stop Bits</label>
+      <select id="stopBits" name="stopBits">
+        <option value="">Select Stop Bits</option>
+        <option>1</option>
+        <option>2</option>
+      </select>
+
+      <label for="clientAddress">Client Address</label>
+      <input type="text" id="clientAddress" name="clientAddress" placeholder="Enter client address">
+
+      <label for="interfaceType">Interface Type</label>
+      <select id="interfaceType" name="interfaceType">
+        <option value="">Select Interface Type</option>
+        <option>RS232</option>
+        <option>RS485</option>
+        <option>TCP/IP</option>
+      </select>
+
+      <button type="submit">Save Configuration</button>
+    </form>
+  </div>
+
+</body>
+</html>
